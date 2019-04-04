@@ -5,20 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1">
   <title>Berlin Palace</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
   <script src="https://js.arcgis.com/4.11/"></script>
 
   <style>
     html,
-    body,
-    #viewDiv {
+    body{
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
       text-align: center;
-      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      font-family: sans-serif;
+    }
+
+    #viewDiv {
+      width: 800px;
+      max-width: 100%;
+      height: 600px;
+      max-height: 100%;
+      margin: 0 auto;
+      margin-top: 50px;
     }
 
     #viewDiv canvas {
@@ -30,20 +37,16 @@
     }
 
     footer.attribution {
-      color: #ccc;
+      color: #aaa;
       background-color: transparent;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      font-size: 0.5em;
+      font-size: 0.7em;
       padding: 5px;
     }
 
     footer a {
       text-decoration: none;
-      color: #ccc;
-      border-bottom: 1px dashed #ccc;
+      color: #aaa;
+      border-bottom: 1px dashed #aaa;
     }
 
   </style>
@@ -91,9 +94,9 @@
 
 <body>
   <div id="viewDiv"></div>
-  <!-- <footer class='attribution'>
+  <footer class='attribution'>
       Data provided by <a href='https://www.stadtentwicklung.berlin.de/planen/stadtmodelle/de/digitale_innenstadt/3d/download/index.shtml' target='_blank'>Berlin's Senatsverwaltung für Stadtentwicklung und Wohnen</a> and processed in <a href='https://www.esri.com/en-us/arcgis/products/esri-cityengine/overview' target='_blank'>CityEngine</a> by <a href='https://robotized.arisona.ch' target='_blank'>Stefan Arisona</a> in <a href='https://github.com/arisona/berlin_3d' target='_blank'>DEMO:POLIS</a> | <a href='http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf' target='_blank'>See data license</a> | Map created with <a href='https://developers.arcgis.com/javascript/' target='_blank'>ArcGIS API for JS</a>.
-  </footer> -->
+  </footer>
 </body>
 
 </html>
