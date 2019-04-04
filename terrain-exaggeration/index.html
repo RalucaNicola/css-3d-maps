@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Terrain exaggeration</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #viewDiv {
+      filter: drop-shadow(0px 0px 25px rgba(77, 40, 0, 0.4))
+    }
+
+    h3 {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      color: gray;
+      font-family: sans-serif;
+      text-align: center;
+      letter-spacing: 3px;
+    }
+
+    .snow {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .i-large,
+    .i-medium,
+    .i-small {
+      position : absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+    .i-large {
+      background: url("./img/snow_large.png") repeat 0px 0px;
+      animation: dropSnowFlakes 2s linear infinite;
+    }
+    .i-medium {
+      background: url("./img/snow_medium.png") repeat 0px 0px;
+      animation: dropSnowFlakes 12s linear infinite;
+    }
+    .i-small {
+      background:url("./img/snow_small.png") repeat 0px 0px;
+      animation: dropSnowFlakes 27s linear infinite;
+    }
+
+    @keyframes dropSnowFlakes {
+      from { background-position: 0 0; }
+      to { background-position: 0 413px; }
+    }
+
+  </style>
+
+  <script src="https://js.arcgis.com/4.11/"></script>
+
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <h3>Engadin Valley</h3>
+  <div class="snow">
+    <div class="i-large"></div>
+    <div class="i-medium"></div>
+    <div class="i-small"></div>
+  </div>
+</body>
+</html>

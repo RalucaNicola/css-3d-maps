@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#view1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#view2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#view3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#view4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+#slider {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  border: 6px solid white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px 0;
+  background: rgba(255, 255, 255, 0.3);
+  display: none;
+}
+
+#slider .cs-handle-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  margin-top: -1px;
+}
+
+#slider .cs-handle {
+  cursor: default;
+  position: absolute;
+  right: -15px;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #FFFFFF, #efefef);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 10px 0;
+  cursor: pointer;
+}
+
+#slider .cs-handle:active {
+  background: linear-gradient(180deg, #EBEBEB, #DFDFDF)
+}
+
+#angle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.5em;
+  color: white;
+}
+
+#rotate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 40%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  display: none;
+}
+
+img {
+  height: 30px;
+}
+
+#attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.8em;
+  padding: 0.4em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}

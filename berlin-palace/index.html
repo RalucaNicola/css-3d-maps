@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Berlin Palace</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.11/"></script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+
+    #viewDiv canvas {
+      filter: brightness(0.8) sepia(0.9);
+    }
+
+    .esri-overlay-surface {
+      box-shadow: inset 0 0 40px 40px #222;
+    }
+
+    footer.attribution {
+      color: #ccc;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 0.5em;
+      padding: 5px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #ccc;
+      border-bottom: 1px dashed #ccc;
+    }
+
+  </style>
+
+  <script>
+    require([
+      "esri/WebScene",
+      "esri/views/SceneView",
+      "dojo/domReady!"
+    ], function (
+      WebScene,
+      SceneView
+    ) {
+        const webscene = new WebScene({
+          portalItem: {
+            id: "c5ea2c766162440bb7df630c4984a790"
+          }
+        });
+
+        const view = new SceneView({
+          map: webscene,
+          container: "viewDiv",
+          qualityProfile: "high",
+          environment: {
+            lighting: {
+              directShadowsEnabled: true,
+              ambientOcclusionEnabled: false,
+              date: "Thu Mar 15 2018 14:55:00 GMT+0100 (Central European Standard Time)"
+            },
+            atmosphereEnabled: false,
+            background: {
+              type: "color",
+              color: "white"
+            },
+            starsEnabled: false
+          },
+          ui: {
+            components: []
+          }
+        });
+      });
+
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+  <!-- <footer class='attribution'>
+      Data provided by <a href='https://www.stadtentwicklung.berlin.de/planen/stadtmodelle/de/digitale_innenstadt/3d/download/index.shtml' target='_blank'>Berlin's Senatsverwaltung für Stadtentwicklung und Wohnen</a> and processed in <a href='https://www.esri.com/en-us/arcgis/products/esri-cityengine/overview' target='_blank'>CityEngine</a> by <a href='https://robotized.arisona.ch' target='_blank'>Stefan Arisona</a> in <a href='https://github.com/arisona/berlin_3d' target='_blank'>DEMO:POLIS</a> | <a href='http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf' target='_blank'>See data license</a> | Map created with <a href='https://developers.arcgis.com/javascript/' target='_blank'>ArcGIS API for JS</a>.
+  </footer> -->
+</body>
+
+</html>
